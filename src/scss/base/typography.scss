@@ -1,0 +1,46 @@
+header {
+    color: $white;}
+.title-main, h1 {
+    line-height: 1.2;
+    @include fontsize(30)}
+    .title-main span:last-child, h1 span:last-child {
+        @include fontsize(22); }
+.title-sub {
+    @include fontsize(48);}
+    .title-blurb span {
+    line-height: 25px; }
+
+.menu {
+    color: $grey;}
+    
+h1 {
+    @include fontsize(22);;
+}
+.nav-main a {
+    text-decoration: none;
+    @include desktop{
+    @include textTransform(uppercase);
+}}
+    .nav-main ul {
+    @include desktop{
+    text-align: right; }}
+    .nav-main a:hover {
+        color: $pink;
+        font-weight: bold; }
+figure figcaption {
+    color: $white;
+    line-height: 2;}
+    figure figcaption .caption-head {
+        @include google-font("Roboto") ;
+        @include textTransform(uppercase);
+        @include fontsize(22);}
+    figure figcaption .caption-blurb { @include tablet{
+        @include fontsize(18); }
+
+
+h2, h3 {
+    @include google-font("Roboto");
+    @include textTransform(uppercase);
+    @include fontsize(22);}
+
+h3 {@include textTransform(none); }}

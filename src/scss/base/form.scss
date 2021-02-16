@@ -1,0 +1,44 @@
+
+/* form */
+form {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 550px; 
+  @include desktop {
+    padding-bottom: 40px;
+  }}
+    form p {
+      font-size: $fontSmall; 
+    @include desktop{
+      display: inline-block;
+      float: left; }}
+  
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    @include fontsize(12);
+    outline: none;
+    padding: 15px;
+    color: $grey;
+    border: 2px solid $pink;
+    margin-bottom: 20px; }
+  
+  textarea {
+    resize: none; }
+  
+  section {
+    padding: 50px 0; }
+    section .text-center p, section h2 p, section h3 p, section .nav-main p {
+      padding: 0 20px;
+      max-width: 900px;
+      margin: 0 auto; }
+
+      form 
+        form .button-send {
+          @include desktop{
+          float: right;
+          margin-top: 0; }}
+      .text-center form p, h2 form p, h3 form p, .nav-main form p {
+        margin-top: 10px; }
+  
