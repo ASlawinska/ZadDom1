@@ -56,32 +56,4 @@ a {
   width: 100%;
   clear: both; }
 
-html {
-  overflow-x: hidden;
-  width: 100%; }
 
-body {
-  font-family: 'Roboto';
-  overflow-x: hidden;
-  width: 100%;
-  padding: 25px;
-  line-height: 1.5;
-  color: #686868; }
-
-.container {
-  width: 100%;
-  margin: 0 auto;
-  max-width: 1200px; }
-
-.text-center, .social-wrap, h2, h3, .nav-main {
-  text-align: center; }
-
-.arrow {
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s; }
-  .arrow:hover {
-    -webkit-transform: scale(2.5);
-        -ms-transform: scale(2.5);
-         -o-transform: scale(2.5);
-            transform: scale(2.5); }

@@ -19,30 +19,63 @@ $desktop: 992;
     @content;
   }
 }
-@mixin fontsize($size){
-  font-size: $size * 1px;
-  font-size: $size * 0.0625rem;}
+@mixin fontsize($fsize, $lineHeight: 1){
+  font-size: $fsize * 1px;
+  font-size: $fsize * 0.0625rem;
+  line-height: $lineHeight;}
 
-@mixin google-font($family) {
-  @import url("http://fonts.googleapis.com/css?family=#{$family}");
+
+@mixin google-font {
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap')
   }
 @mixin border($direction, $color) {
-    border-#{$direction}: 2px, solid, $color;
-  }
+    @if variable-exists($direction) {
+      border-#{$direction}: 2px solid $color;
+  } @else {
+      border: 2px solid $color;
+  }}
 @mixin textTransform($textTransform){
   text-transform: $textTransform;
 }
-
-
-// /* ===== Usage ===== */
-// h1 {
-//   font-size: 10px;
-
-//   @include tablet {
-//     font-size: 12px;
-//   }
-
-//   @include desktop {
-//     font-size: 20px;
-//   }
-// }
+@mixin bgc-img ($background-size, $background-position){
+  background-repeat: no-repeat;
+  background-size: $background-size;
+  background-position: $background-position;
+}
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin transition($property, $duration, $timing) {
+  -webkit-transition: $property, $duration, $timing;
+  -moz-transition: $property, $duration, $timing;
+  -ms-transition: $property, $duration, $timing;
+  -o-transition: $property, $duration, $timing;
+  transition: $property, $duration, $timing;
+}
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  transform: translate($x, $y);
+}
+@mixin scale($x, $y: $x) {
+  -webkit-transform: scale ($x, $y);
+  -moz-transform: scale ($x, $y);  -ms-transform: scale ($x, $y);
+  -o-transform: scale ($x, $y);
+  transform: scale ($x, $y);
+}
+@mixin transfOrigin($x, $y) {
+  -webkit-transform-origin: $x, $y;
+  -moz-transition-origin: $x, $y;  -ms-transform-origin: $x, $y;
+  -o-transform-origin: $x, $y;
+  transform-origin: $x, $y;
+}

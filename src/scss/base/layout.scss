@@ -1,314 +1,213 @@
-
-/* LAYOUT  */
-header {
-    position: relative;
-    background: url("https://image.ibb.co/jBXfxA/bg-contact.jpg") no-repeat center center/cover;
-    padding: 15% 0 0 0;
-    min-height: 650px;}
+// /* LAYOUT  */
+// header {
+//   @include position(relative);
+//   background: url("https://image.ibb.co/jBXfxA/bg-contact.jpg"); 
+//   @include bgc-img (center, center/cover);
+//   padding: 15% 0 0 0;
+//   min-height: 650px;}
     
-    .title-main span, h1 span {
-      display: block; }
+//   .title-main span, h1 span {
+//     display: block; }
+//   .title-sub {
+//     @include position(relative); }
+//     .title-sub:after {
+//       content: '';
+//       display: block;
+//       @include size(82px, 3px);
+//       @include position(absolute, $bottom: -10px, $left: calc(50% - 41px)/-webkit-calc(50% - 41px));
+//       background: $white; }
+//   .title-blurb {
+//     padding: 40px 0; }
+//     .title-blurb span {
+//       display: block;
+//       }
+//   .menu {
+//     background: $white;
+//     display: block;
+//     @include position(absolute, $right: 0, $bottom: 0);
+//     @include size (100%, auto);
+//     vertical-align: middle;
+//     padding: 10px;
+//     @include border('bottom', $darkGrey); }
+//     h1 {
+//       display: inline-block; }
+//     .nav-toggle {
+//       display: inline-block;
+//       float: right;
+//       @include size(40px, 40px);
+//       cursor: pointer;
+//       @include transition(all, 0.5s, ease); 
+//       @include desktop {
+//       display: none; }}
+//       div {
+//         display: block;
+//         @include size(40px, 3px);
+//         @include position(static, $top: 7px);
+//         background-color: $grey;
+//         @include transition(all, 0.5s, ease);}
+//       &:hover {
+//         opacity: 0.7; }
+//     .nav-main {
+//       display: none;
+//       clear: both;
+//       background: $white; 
+//       @include desktop{
+//       display: block;
+//       float: right;
+//       @include size(70%, auto);
+//       }}
+//       a {
+//         @include position(relative);
+//         padding-bottom: 2px;
+//         @include transition(all, 0.3s, ease); 
+//         display: block;
+//         @include size(100%, auto);
+//         padding: 20px 0; 
+//         @include desktop{
+//         padding: 0; }}
+//         &::before {
+//           content: '';
+//           @include position(absolute, $bottom: 0, $left: 0);
+//           @include size(100%, 4px);
+//           background-color: $pink;
+//           @include scale (0,1);
+//           @include transfOrigin(0, 50%);
+//           @include transition(all, 0.3s, ease); }
+//         &:hover,&::before {
+//           @include scale (1,1)}
+//       li {
+//         @include desktop{
+//         display: inline-block;
+//         left: 40px }}
+//     @include large {
+//     min-height: 95vh;
+//     padding-top: 14em; 
+//     }
+// /* work */
+// .work-wrap:before, .work-wrap:after {
+//   content: " ";
+//   display: table; }
 
-  
-  .title-sub {
-    position: relative; }
-  
-    .title-sub:after {
-      content: '';
-      position: absolute;
-      display: block;
-      width: 82px;
-      height: 3px;
-      left: -webkit-calc(50% - 41px);
-      left: calc(50% - 41px);
-      bottom: -10px;
-      background: $white; }
-  
-  .title-blurb {
-    padding: 40px 0; }
-    .title-blurb span {
-      display: block;
-      line-height: 25px; }
-  
-  .menu {
-    background: $white;
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    line-height: 40px;
-    vertical-align: middle;
-    padding: 10px;
-    @include border('bottom', $darkGrey); }
-    
-  h1 {
-    display: inline-block; }
-  
-  .nav-toggle {
-    display: inline-block;
-    float: right;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease; 
-  @include desktop {
-    display: none; }}
-    .nav-toggle div {
-      display: block;
-      width: 40px;
-      height: 3px;
-      margin-top: 7px;
-      background-color: $grey;
-      -webkit-transition: all 0.5s;
-      -o-transition: all 0.5s;
-      transition: all 0.5s; }
-    .nav-toggle:hover {
-      opacity: 0.7; }
-  .nav-main {
-    display: none;
-    clear: both;
-    background: $white; 
-  @include desktop{
-    display: block;
-    float: right;
-    width: 70%; }}
-    .nav-main a {
-      position: relative;
-      padding-bottom: 2px;
-      -webkit-transition: 0.3s;
-      -o-transition: 0.3s;
-      transition: 0.3s;
-      display: block;
-      width: 100%;
-      padding: 20px 0; 
-      @include desktop{
-        padding: 0; }}
-    .nav-main li {
-      @include desktop{
-      display: inline-block;
-      margin-left: 40px; }}
+// .work-wrap:after {
+//   clear: both; }
 
-      .nav-main a::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 4px;
-        width: 100%;
-        background-color: $pink;
-        -webkit-transform: scale(0, 1);
-            -ms-transform: scale(0, 1);
-             -o-transform: scale(0, 1);
-                transform: scale(0, 1);
-        -webkit-transform-origin: 0 50%;
-            -ms-transform-origin: 0 50%;
-             -o-transform-origin: 0 50%;
-                transform-origin: 0 50%;
-        -webkit-transition: 0.3s;
-        -o-transition: 0.3s;
-        transition: 0.3s; }
-        .nav-main a:hover::before {
-          -webkit-transform: scale(1, 1);
-              -ms-transform: scale(1, 1);
-               -o-transform: scale(1, 1);
-                  transform: scale(1, 1); }
-    @include large {
-    min-height: 95vh;
-    padding-top: 14em; 
-    }
-/* work */
-.work-wrap:before,
-.work-wrap:after {
-  content: " ";
-  display: table; }
+// figure {
+//   @include position(relative, $top: 10px, $right: 0, $bottom: 10px, $left: 0);
+//   @include size(100%, auto);
+//   cursor: pointer;
+//   display: inline-block;}
+//   &::before {
+//     content: '';
+//     @include position(absolute, $top: 0, $left: 0);
+//     @include size(100%, 100%);
+//     background-color: $black;
+//     opacity: 0;
+//     @include transition(all, 1s, ease-in-out); }
+//   &:hover,&::before {
+//     opacity: 0.7; }
+//   &:hover
+//     .caption-head:before {
+//       @include position(static, $top: -20px, $left: -20px)};
+//   &:hover
+//     .caption-head:after {
+//     @include position(static, $top: -20px, $right: -20px)};
+//   &:hover 
+//     .caption-blurb:before {
+//       @include position(static, $bottom: -20px, $left: -20px)};
+//   &:hover 
+//     .caption-blurb:after {
+//       @include position(static, $right: -20px);$bottom: -20px};
+//   img {
+//     @include size(100%, auto);
+//     display: block; }
+//   figcaption {
+//     @include position(absolute, $top: 50%, $left: 50%);
+//     min-width: 200px;
+//     @include translate(-50%, -50%);
+//     @include transition(all, 1s, ease-in-out); }
+//     &::before {
+//       content: '';
+//       @include position(absolute, $top: calc(50% + 2px)/-webkit-calc(50% + 2px));
+//       @include size(80%, 2px);
+//       @include translate(-50%, -50%);
+//       background-color: $white; }
+//     .caption-head {
+//       @include position(relative);}
+//       &::before {
+//         content: '';
+//         @include position(absolute, $top: 0, $left: 0);
+//         @include border('top', $white);
+//         @include border('left', $white);
+//         @include size(20px, 20px);
+//         @include transition (all, 1s, ease-in-out); }
+//       &::after {
+//         content: '';
+//         @include position(absolute, $top: 0, $right: 0);
+//         @include border('top', $white);
+//         @include border('right', $white);
+//         @include size(20px, 20px);
+//         @include transition (all, 1s, ease-in-out); }
+//     .caption-blurb {
+//       @include position(relative); }
+//       &::before {
+//         content: '';
+//         @include position(absolute, $bottom: 0, $left: 0);
+//         @include border('bottom', $white);
+//         @include border('left', $white);
+//         @include size(20px, 20px);
+//         @include transition (all, 1s, ease-in-out); }
+//       &::after {
+//         content: '';
+//         @include position(absolute, $right: 0, $bottom: 0);
+//         @include border('right', $white);
+//         @include border('bottom', $white);
+//         @include size(20px, 20px);
+//         @include transition(all, 1s, ease-in-out); }
 
-.work-wrap:after {
-  clear: both; }
+// #testimonials {
+//   padding: 5px 0; }
 
-figure {
-  position: relative;
-  margin: 10px 0;
-  cursor: pointer;
-  display: inline-block;
-  width: 100%; }
-  figure:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $black;
-    opacity: 0;
-    -webkit-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out; }
-  figure:hover:before {
-    opacity: 0.7; }
-  figure:hover .caption-head:before {
-    left: -20px;
-    top: -20px; }
-  figure:hover .caption-head:after {
-    right: -20px;
-    top: -20px; }
-  figure:hover .caption-blurb:before {
-    left: -20px;
-    bottom: -20px; }
-  figure:hover .caption-blurb:after {
-    right: -20px;
-    bottom: -20px; }
-  figure img {
-    width: 100%;
-    display: block; }
-  figure figcaption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 200px;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-         -o-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    -webkit-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out; }
-    figure figcaption:before {
-      content: '';
-      position: absolute;
-      width: 80%;
-      height: 2px;
-      top: -webkit-calc(50% + 2px);
-      top: calc(50% + 2px);
-      -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-           -o-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-      background-color: $white; }
-    figure figcaption .caption-head {
-      position: relative;
-}
-      figure figcaption .caption-head:before {
-        content: '';
-        position: absolute;
-        @include border('top', $white);
-        @include border('left', $white);
-        height: 20px;
-        width: 20px;
-        left: 0;
-        top: 0;
-        -webkit-transition: all 1s ease-in-out;
-        -o-transition: all 1s ease-in-out;
-        transition: all 1s ease-in-out; }
-      figure figcaption .caption-head:after {
-        content: '';
-        position: absolute;
-        @include border('top', $white);
-        @include border('right', $white);
-        height: 20px;
-        width: 20px;
-        right: 0;
-        top: 0;
-        -webkit-transition: all 1s ease-in-out;
-        -o-transition: all 1s ease-in-out;
-        transition: all 1s ease-in-out; }
-    figure figcaption .caption-blurb {
-      position: relative; }
-      
-      figure figcaption .caption-blurb:before {
-        content: '';
-        position: absolute;
-        @include border('bottom', $white);
-        @include border('left', $white);
-        height: 20px;
-        width: 20px;
-        left: 0;
-        bottom: 0;
-        -webkit-transition: all 1s ease-in-out;
-        -o-transition: all 1s ease-in-out;
-        transition: all 1s ease-in-out; }
-      figure figcaption .caption-blurb:after {
-        content: '';
-        position: absolute;
-        @include border('right', $white);
-        @include border('bottom', $white);
-        height: 20px;
-        width: 20px;
-        right: 0;
-        bottom: 0;
-        -webkit-transition: all 1s ease-in-out;
-        -o-transition: all 1s ease-in-out;
-        transition: all 1s ease-in-out; }
-
-#testimonials {
-  padding: 5px 0; }
-
-/* video*/
-.video {
-  height: 500px;
-  background: url("https://i.imgur.com/0IRYG66.jpg") no-repeat;
-  background-size: cover;
-  position: relative; }
+// /* video*/
+// .video {
+//   @include size(auto, 500px);
+//   background: url("https://i.imgur.com/0IRYG66.jpg");
+//   @include bgc-img (cover, default);
+//   @include position(relative);}
 
 /*contact */
 #contact {
-  position: relative; }
-  #contact:before {
+  @include position(relative); }
+  :before {
     content: '';
-    position: absolute;
+    @include position(absolute, $top: 0, $left: 0);
     display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("https://image.ibb.co/h9qYHA/bg-video.png") no-repeat center center;
+    @include size(100%, 100%);
+    background: url("https://image.ibb.co/h9qYHA/bg-video.png"); @include bgc-img (center, center);
     opacity: 0.1;
     z-index: -1; }
 
-h2, h3 {
-  position: relative;
+//   .figure-sm { 
+//     @include large{
+//     @include size(48%, auto);
+//     display: block;
+//     float: left; }}
+//   .figure-sm.one { 
+//     @include large {
+//       @include position(static, $left: 4%)}}
 
-  padding-bottom: 14px;
-  margin-bottom: 30px;
-  font-size: $fontNormal}
-  h2:after, h3:after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 72px;
-    height: 3px;
-    left: -webkit-calc(50% - 36px);
-    left: calc(50% - 36px);
-    bottom: 0px;
-    background: $pink; }
-
-
-  .figure-sm { 
-    @include large {
-    width: 48%;
-    display: block;
-    float: left; }}
-  .figure-sm.one { 
-    @include large {
-    margin-left: 4%; }}
-
-@media (min-width: 992px) {
-
-  .work-column-lg {
-    display: block;
-    width: 61.5%;
-    float: left; }
-  .work-column-sm {
-    display: block;
-    width: 35.5%;
-    float: left;
-    margin-left: 3%; }
-    .work-column-sm img {
-      height: auto; }
-    .text-center, .nav-main {
-      margin-top: 10px; } }
-
-  footer .copy {
-    margin-top: 20px; }
+// footer .copy {
+//   @include position(static, $top: 20px); }
+// @media (min-width: 992px) {
+//   .work-column-lg {
+//     display: block;
+//     @include size(61.5%, auto);
+//     float: left; }
+//   .work-column-sm {
+//     display: block;
+//     @include size(35.5%, auto);
+//     float: left;
+//     @include position(static, $left: 3%); }
+//     .work-column-sm img {
+//       @include size(auto, auto); }
+//     .text-center, .nav-main {
+//       @include position(static, $top: 10px);} }
