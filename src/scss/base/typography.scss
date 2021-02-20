@@ -6,7 +6,7 @@ header {
         @include fontsize(22); }
 .title-sub {
     @include fontsize(48);}
-    .title-blurb span {
+.title-blurb span {
     @include fontsize(48, 25px)}
 
 .menu {
@@ -18,29 +18,29 @@ h1 {
 }
 .nav-main a {
     text-decoration: none;
+    &:hover {
+        color: $pink;
+        font-weight: bold; };
     @include desktop{
     @include textTransform(uppercase);
 }}
     .nav-main ul {
     @include desktop{
     text-align: right; }}
-    .nav-main a:hover {
-        color: $pink;
-        font-weight: bold; }
+
 figure figcaption {
     color: $white;
     }
-    figure figcaption .caption-head {
+    .caption-head {
         @include google-font;
         @include textTransform(uppercase);
         @include fontsize(22,2);}
-    figure figcaption .caption-blurb { @include tablet{
+    .caption-blurb { @include tablet{
         @include fontsize(18,2); }
 
-
-h2, h3 {
-    @include google-font;
-    @include textTransform(uppercase);
-    @include fontsize(22, 1);}}
-
-// h3 {@include textTransform(none); }}
+#contact 
+    h2, h3 {
+        @include google-font;
+        @include textTransform(uppercase);
+        @include fontsize(22, 1);}}
+    h3 {@include textTransform(none); }

@@ -1,10 +1,5 @@
 /* MODULES - Individual style components */
 /* buttons */
-header
-  .arrow {
-    @include transition (all, 0.5s, default) }
-    :hover {
-      @include scale(2.5) }
 button {
     background-color: $pink;
     color: $white;
@@ -13,10 +8,10 @@ button {
     padding: 10px 30px;
     @include textTransform(uppercase);
     @include fontsize(12);
-    transition: opacity 0.5s; }
-    :hover {
+    transition: opacity 0.5s;
+    &:hover{
       opacity: 0.6; }
   
   .button-send {
-    margin-top: 10px; }
+    margin-top: 10px; }}
   

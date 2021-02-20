@@ -26,7 +26,7 @@ $desktop: 992;
 
 
 @mixin google-font {
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap')
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
   }
 @mixin border($direction, $color) {
     @if variable-exists($direction) {
@@ -46,12 +46,12 @@ $desktop: 992;
   width: $width;
   height: $height;
 }
-@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
-  position: $position;
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-  left: $left;
+@mixin margin($m-direction, $m-amount) {
+  @if $m-direction == all {
+    margin: $m-amount;
+  } @else {
+    margin-#{$m-direction}: $m-amount;
+  }
 }
 @mixin transition($property, $duration, $timing) {
   -webkit-transition: $property, $duration, $timing;

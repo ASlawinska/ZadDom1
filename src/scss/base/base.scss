@@ -7,28 +7,23 @@ body {
     @include fontsize(18, 1.5);
     padding: 25px;
     color: $grey;
-    font-family: 'Roboto';}
+    font-family: 'Roboto', sans-serif;}
     section {
         padding: 50px 0; }
-        .text-center p, h2 p,  h3 p, .nav-main p {
+        .text-center p, h2 p, h3 p, .nav-main p {
             padding: 0 20px;
             max-width: 900px;
-            margin: 0 auto; }
+            @include margin(all, 0 auto) }
     .container {
         @include size(100%, auto);
-        margin: 0 auto;
+        @include margin(all, 0 auto);
         max-width: 1200px;}
         .text-center, .social-wrap, h2, h3, .nav-main {
             text-align: center; }
         .text-center form p, h2 form p, h3 form p, .nav-main form p { @include desktop{
-        margin-top: 10px; }}
-    
-    h2, h3 {
-        @include position(relative, $bottom: 30px);
-        padding-bottom: 14px
-        &:after{
-            content: '';
-            @include position(absolute, $bottom: 0, $left: calc(50% - 36px));
-            display: block;
-            @include size(72px, 3px);
-            background: $pink; }}
+            @include margin(top, 10px); }}
+    header
+        .arrow {
+            @include transition (all, 0.5s, ease); 
+            &:hover{
+                @include scale(2.5)}}

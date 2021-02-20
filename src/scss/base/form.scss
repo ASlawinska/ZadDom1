@@ -1,9 +1,10 @@
 
 /* form */
 form {
-  @include position('static', $top: 20px, $right: auto, $bottom: 20px, $left: auto);
-  @include size(100%, auto);
   max-width: 550px; 
+  position: relative;
+  @include size(100%, auto);
+  @include margin(all, 20px auto);
   @include desktop {
     padding-bottom: 40px;
   }
@@ -11,20 +12,32 @@ form {
       @include fontsize(12);
       @include desktop{
         display: inline-block;
-        float: left; }}
-  input, textarea {
-    display: block;
-    width: 100%;
-    @include fontsize(12);
-    outline: none;
-    padding: 15px;
-    color: $grey;
-    @include border('default', $pink);
-    margin-bottom: 20px; }
-  textarea {
-    resize: none; }
-  .button-send {
-    @include desktop{
-    float: right;
-    margin-top: 0; }}
-  }
+        float: left; }
+    }}
+input, textarea {
+  display: block;
+  width: 100%;
+  @include fontsize(12);
+  outline: none;
+  padding: 15px;
+  color: $grey;
+  @include border('default', $pink);
+  @include margin(bottom, 20px); }
+textarea {
+  resize: none; }
+.button-send {
+  @include desktop{
+  float: right;
+  @include margin(top, 0); }}
+  
+//   @media (min-width: 992px) {
+//           form {
+//   padding-bottom: 40px; }
+//   form p {
+//     display: inline-block;
+//     float: left; }
+//   form .button-send {
+//     float: right;
+//     margin-top: 0; }
+// .text-center form p, h2 form p, h3 form p, .nav-main form p {
+//   margin-top: 10px; }
