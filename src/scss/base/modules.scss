@@ -9,7 +9,7 @@
 
 figure {
     position: relative;
-    margin: 10px 0;
+    @include margin(all, 10px 0);
     cursor: pointer;
     display: inline-block;
     width: 100%; 
