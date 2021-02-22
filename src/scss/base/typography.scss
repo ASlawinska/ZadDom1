@@ -36,11 +36,9 @@ figure figcaption {
         @include textTransform(uppercase);
         @include fontsize(22,2);}
     .caption-blurb { @include tablet{
-        @include fontsize(18,2); }
+        @include fontsize(18,2); }}
 
-#contact 
-    h2, h3 {
-        @include google-font;
-        @include textTransform(uppercase);
-        @include fontsize(22, 1);}}
-    h3 {@include textTransform(none); }
+h2, h3 {
+    @include textTransform(uppercase);
+    @include fontsize(22, 1);}
+h3 {@include textTransform(none); }

@@ -37,7 +37,7 @@ $desktop: 992;
 @mixin textTransform($textTransform){
   text-transform: $textTransform;
 }
-@mixin bgc-img ($background-size, $background-position){
+@mixin bgc-img ($background-size, $background-position: null){
   background-repeat: no-repeat;
   background-size: $background-size;
   background-position: $background-position;
@@ -52,6 +52,13 @@ $desktop: 992;
   } @else {
     margin-#{$m-direction}: $m-amount;
   }
+}
+@mixin position($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
 }
 @mixin transition($property, $duration, $timing) {
   -webkit-transition: $property, $duration, $timing;
