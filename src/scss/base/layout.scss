@@ -47,6 +47,8 @@ h1 {
   @include wh(40px, 40px);
   cursor: pointer;
   @include transition (all 1s ease);
+  @include desktop{
+    display: none; }
   div {
     display: block;
     @include wh(40px, 3px);
@@ -60,71 +62,42 @@ h1 {
 .nav-main {
   display: none;
   clear: both;
-  background: $white; }
-  .nav-main a {
+  background: $white;
+  @include desktop {
+    display: block;
+    float: right;
+    @include wh(70%, auto);}
+  a {
     position: relative;
     padding-bottom: 2px;
     @include transition (0.3s);
     display: block;
     @include wh(100%, auto);
-    padding: 20px 0; }
-    .nav-main a::before {
+    padding: 20px 0;
+    @include desktop{
+      text-transform: uppercase;
+      padding: 0; }
+    &:before {
       content: '';
       position: absolute;
-      bottom: 0;
-      left: 0;
+      @include position($bottom: 0, $left: 0);
       @include wh(100%, 4px);
       background-color: $pink;
+      @include transition (0.3s);
       @include scale (0, 1);
-      @include transfOrigin (0, 50%);
-      @include transition (0.3s);}
-      .nav-main a:hover::before {
-        @include scale (1);}
-
-
+      @include transfOrigin (0, 50%);}
+    &:hover::before {
+      @include scale (1);}
+      }
+  ul {
+    @include desktop{
+      text-align: right; }}
+  li {
+    @include desktop{
+      display: inline-block;
+      @include margin(left, 40px); }}
+    }
 footer 
   .copy {
     @include margin(top, 20px); }
 
-.figure-sm {
-  @include large {
-  @include wh(48%, auto);
-  display: block;
-  float: left; }}
-.figure-sm.one {
-  @include large{
-  @include margin(left, 4%); } }
-    
-      // .nav-toggle {
-      //   @include desktop{
-      //     display: none; }}
-      // .nav-main {
-      //   @include desktop {
-      //   display: block;
-      //   float: right;
-      //   @include wh(70%, auto); }}
-      //   .nav-main ul {
-      //     @include desktop{
-      //     text-align: right; }}
-      //   .nav-main li {
-      //     @include desktop{
-      //     display: inline-block;
-      //     @include margin(left, 40px); }}
-      //   .nav-main a {
-      //     @include desktop{
-      //     text-transform: uppercase;
-      //     padding: 0; }}
-      // .work-column-lg {
-      //   @include desktop{
-      //   display: block;
-      //   @include wh(61.5%, auto);
-      //   float: left; }}
-      // .work-column-sm {
-      //   @include desktop{
-      //   display: block;
-      //   @include wh(35.5%, auto);
-      //   float: left;
-      //   @include margin(left, 3%); }}
-      //   .work-column-sm img {
-      //     @include desktop{
-      //     height: auto; }}

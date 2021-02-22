@@ -94,6 +94,28 @@ figure {
             }
         }
     }
+.figure-sm {
+    @include large {
+        @include wh(48%, auto);
+        display: block;
+        float: left; }}
+.figure-sm.one {
+    @include large{
+        @include margin(left, 4%); } }
+.work-column-lg {
+    @include desktop{
+        display: block;
+    @include wh(61.5%, auto);
+        float: left; }}
+.work-column-sm {
+    @include desktop{
+        display: block;
+    @include wh(35.5%, auto);
+        float: left;
+    @include margin(left, 3%); }}
+.work-column-sm img {
+    @include desktop{
+        height: auto; }}
 #testimonials {
     padding: 5px 0; }
 
