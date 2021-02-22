@@ -13,5 +13,4 @@ button {
       opacity: 0.6; }
   
   .button-send {
-    margin-top: 10px; }}
-  
+    @include margin(top, 10px)}}

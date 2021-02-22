@@ -13,8 +13,7 @@ header {
     content: '';
     position: absolute;
     display: block;
-    width: 82px;
-    height: 3px;
+    @include wh(82px, 3px);
     left: -webkit-calc(50% - 41px);
     left: calc(50% - 41px);
     bottom: -10px;
@@ -31,7 +30,7 @@ header {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 100%;
+  @include wh(100%, auto);
   vertical-align: middle;
   padding: 10px;
   border-bottom: 2px solid $darkGrey; }
@@ -42,16 +41,14 @@ h1 {
 .nav-toggle {
   display: inline-block;
   float: right;
-  width: 40px;
-  height: 40px;
+  @include wh(40px, 40px);
   cursor: pointer;
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   div {
     display: block;
-    width: 40px;
-    height: 3px;
+    @include wh(40px, 3px);
     @include margin(top, 7px);
     background-color: $grey;
     -webkit-transition: all 0.5s;
@@ -72,15 +69,14 @@ h1 {
     -o-transition: 0.3s;
     transition: 0.3s;
     display: block;
-    width: 100%;
+    @include wh(100%, auto);
     padding: 20px 0; }
     .nav-main a::before {
       content: '';
       position: absolute;
       bottom: 0;
       left: 0;
-      height: 4px;
-      width: 100%;
+      @include wh(100%, 4px);
       background-color: $pink;
       -webkit-transform: scale(0, 1);
           -ms-transform: scale(0, 1);
@@ -113,7 +109,7 @@ footer
         min-height: 95vh;
         padding-top: 14em; }
       .figure-sm {
-        width: 48%;
+        @include wh(48%, auto);
         display: block;
         float: left; }
       .figure-sm.one {
@@ -125,7 +121,7 @@ footer
       .nav-main {
         display: block;
         float: right;
-        width: 70%; }
+        @include wh(70%, auto); }
         .nav-main ul {
           text-align: right; }
         .nav-main li {
@@ -136,11 +132,11 @@ footer
           padding: 0; }
       .work-column-lg {
         display: block;
-        width: 61.5%;
+        @include wh(61.5%, auto);
         float: left; }
       .work-column-sm {
         display: block;
-        width: 35.5%;
+        @include wh(35.5%, auto);
         float: left;
         @include margin(left, 3%); }
         .work-column-sm img {

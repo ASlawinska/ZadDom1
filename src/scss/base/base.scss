@@ -1,6 +1,6 @@
 html {
     overflow-x: hidden;
-    @include size(100%, auto); }
+    @include wh(100%, auto); }
 
 body {
     @extend html;
@@ -15,7 +15,7 @@ body {
             max-width: 900px;
             @include margin(all, 0 auto) }
     .container {
-        @include size(100%, auto);
+        @include wh(100%, auto);
         @include margin(all, 0 auto);
         max-width: 1200px;}
         .text-center, .social-wrap, h2, h3, .nav-main {
@@ -27,3 +27,17 @@ body {
             @include transition (all, 0.5s, ease); 
             &:hover{
                 @include scale(2.5)}}
+    h2, h3 {
+    @include margin(bottom, 30px);
+    position: relative;
+    padding-bottom: 14px;
+    &:after{
+        content: '';
+        position: absolute;
+        display: block;
+        background: $pink; 
+        @include margin(bottom, 0 );
+        @include margin(left, calc(50% - 36px));
+        @include wh(72px, 3px);
+        }
+    }
