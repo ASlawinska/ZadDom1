@@ -23,13 +23,11 @@ $desktop: 992;
   font-size: $fsize * 1px;
   font-size: $fsize * 0.0625rem;
   line-height: $lineHeight;}
-
-
 @mixin google-font {
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
   }
 @mixin border($direction, $color) {
-    @if variable-exists($direction) {
+    @if variable-exists('direction') {
       border-#{$direction}: 2px solid $color;
   } @else {
       border: 2px solid $color;

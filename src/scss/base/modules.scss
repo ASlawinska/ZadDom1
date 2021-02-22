@@ -49,26 +49,23 @@ figure {
             position: absolute;
             @include wh(80%, 2px);
             @include calc(top, '50% + 2px');
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+            @include translate(-50%, -50%);
             background-color: $white; }
         .caption-head {
             position: relative;
             &:before {
                 content: '';
                 position: absolute;
-                border-top: 2px solid $white;
-                border-left: 2px solid $white;
+                @include border(top, $white);
+                @include border(left, $white);
                 @include wh(20px);
                 @include position($top: 0, $left: 0);
                 @include transition (all 1s ease-in-out);}
             &:after {
                 content: '';
                 position: absolute;
-                border-top: 2px solid $white;
-                border-right: 2px solid $white;
+                @include border(top, $white);
+                @include border(right, $white);
                 @include wh(20px);
                 @include position($top: 0, $right: 0);
                 @include transition (all 1s ease-in-out); }}
@@ -77,16 +74,16 @@ figure {
             &:before {
                 content: '';
                 position: absolute;
-                border-bottom: 2px solid $white;
-                border-left: 2px solid $white;
+                @include border(bottom, $white);
+                @include border(left, $white);
                 @include wh(20px);
                 @include position($bottom: 0, $left: 0);
                 @include transition (all 1s ease-in-out);}
             &:after {
                 content: '';
                 position: absolute;
-                border-bottom: 2px solid $white;
-                border-right: 2px solid $white;
+                @include border(bottom, $white);
+                @include border(right, $white);
                 @include wh(20px);
                 @include position($right: 0, $bottom: 0);
                 @include transition (all 1s ease-in-out);}
