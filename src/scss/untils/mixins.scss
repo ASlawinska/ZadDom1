@@ -54,7 +54,6 @@ $desktop: 992;
   }
 }
 @mixin position($top: null, $right: null, $bottom: null, $left: null) {
-  position: absolute;
   top: $top;
   right: $right;
   bottom: $bottom;

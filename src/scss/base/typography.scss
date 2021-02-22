@@ -16,17 +16,19 @@ header {
 h1 {
     @include fontsize(22);;
 }
-.nav-main a {
-    text-decoration: none;
-    &:hover {
-        color: $pink;
-        font-weight: bold; };
-    @include desktop{
-    @include textTransform(uppercase);
-}}
-    .nav-main ul {
-    @include desktop{
-    text-align: right; }}
+.nav-main 
+    a {
+        text-decoration: none;
+        &:hover {
+            color: $pink;
+            font-weight: bold; };
+        @include desktop{
+        @include textTransform(uppercase);
+        }
+    }
+    ul {
+        @include desktop{
+        text-align: right; }}
 
 figure figcaption {
     color: $white;
