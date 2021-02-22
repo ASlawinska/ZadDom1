@@ -70,23 +70,24 @@ $desktop: 992;
   bottom: $bottom;
   left: $left;
 }
-@mixin transition($property, $duration, $timing) {
-  -webkit-transition: $property, $duration, $timing;
-  -moz-transition: $property, $duration, $timing;
-  -ms-transition: $property, $duration, $timing;
-  -o-transition: $property, $duration, $timing;
-  transition: $property, $duration, $timing;
+@mixin transition($arg...) {
+  -webkit-transition: $arg;
+  -moz-transition: $arg;
+  -ms-transition: $arg;
+  -o-transition: $arg;
+  transition: $arg;
 }
-@mixin translate($x, $y) {
-  -webkit-transform: translate($x, $y);
-  -moz-transform: translate($x, $y);
-  -ms-transform: translate($x, $y);
-  -o-transform: translate($x, $y);
-  transform: translate($x, $y);
+@mixin translate($x...) {
+  -webkit-transform: translate($x);
+  -moz-transform: translate($x);
+  -ms-transform: translate($x);
+  -o-transform: translate($x);
+  transform: translate($x);
 }
 @mixin scale($x, $y: $x) {
   -webkit-transform: scale ($x, $y);
-  -moz-transform: scale ($x, $y);  -ms-transform: scale ($x, $y);
+  -moz-transform: scale ($x, $y);  
+  -ms-transform: scale ($x, $y);
   -o-transform: scale ($x, $y);
   transform: scale ($x, $y);
 }
