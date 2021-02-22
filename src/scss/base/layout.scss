@@ -17,9 +17,8 @@ header {
     position: absolute;
     display: block;
     @include wh(82px, 3px);
-    left: -webkit-calc(50% - 41px);
-    left: calc(50% - 41px);
-    bottom: -10px;
+    @include position ($bottom: -10px);
+    @include calc (left, '50% - 41px');
     background: $white; }}
 
 .title-blurb {
@@ -31,8 +30,7 @@ header {
   background: $white;
   display: block;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  @include position($right: 0, $bottom: 0);
   @include wh(100%, auto);
   vertical-align: middle;
   padding: 10px;
@@ -75,7 +73,6 @@ h1 {
     @include wh(100%, auto);
     padding: 20px 0;
     @include desktop{
-      text-transform: uppercase;
       padding: 0; }
     &:before {
       content: '';

@@ -37,7 +37,7 @@ body {
         display: block;
         background: $pink; 
         @include margin(bottom, 0 );
-        @include margin(left, calc(50% - 36px));
+        @include calc (left, '50% - 36px');
         @include wh(72px, 3px);
         }
     }

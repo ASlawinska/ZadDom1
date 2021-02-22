@@ -48,8 +48,7 @@ figure {
             content: '';
             position: absolute;
             @include wh(80%, 2px);
-            @include position($top: calc(50% + 2px));
-            top: -webkit-calc(50% + 2px);
+            @include calc(top, '50% + 2px');
             -webkit-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             -o-transform: translate(-50%, -50%);
