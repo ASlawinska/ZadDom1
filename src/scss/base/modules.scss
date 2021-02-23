@@ -1,7 +1,6 @@
 /* work */
-.work-wrap:before,
-.work-wrap:after {
-    content: " ";
+.work-wrap:before,.work-wrap:after {
+    content: "";
     display: table; }
 
 .work-wrap:after {
@@ -12,7 +11,7 @@ figure {
     @include margin(all, 10px 0);
     cursor: pointer;
     display: inline-block;
-    @include wh(100%, auto);
+    width: 100%;
     &:before {
         content: '';
         position: absolute;
@@ -36,7 +35,7 @@ figure {
             &:after {
                 @include position($right: -20px, $bottom: -20px)}}}
     img {
-        @include wh($width: 100%);
+        width: 100%;
         display: block; }
     figcaption {
         position: absolute;
@@ -90,6 +89,11 @@ figure {
             }
         }
     }
+.work-column-sm, .work-column-lg {
+    @include wh(100%, auto);
+    display: block;
+    float: left; }
+/*Media queries section work*/
 .figure-sm {
     @include large {
         @include wh(48%, auto);
@@ -106,12 +110,12 @@ figure {
 .work-column-sm {
     @include desktop{
         display: block;
-    @include wh(35.5%, auto);
+        @include wh(35.5%, auto);
         float: left;
-    @include margin(left, 3%); }}
-.work-column-sm img {
-    @include desktop{
-        height: auto; }}
+        @include margin(left, 3%); }}
+    img {
+        @include desktop{
+            height: auto; }}
 #testimonials {
     padding: 5px 0; }
 

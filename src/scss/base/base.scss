@@ -15,7 +15,7 @@ body {
             max-width: 900px;
             @include margin(all, 0 auto) }
     .container {
-        @include wh(100%, auto);
+        @include wh(100%);
         @include margin(all, 0 auto);
         max-width: 1200px;}
         .text-center, .social-wrap, h2, h3, .nav-main {

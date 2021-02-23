@@ -2,7 +2,7 @@
 form {
   max-width: 550px; 
   position: relative;
-  @include size(100%, auto);
+  @include wh(100%, auto);
   @include margin(all, 20px auto);
   @include desktop {
     padding-bottom: 40px;
@@ -24,19 +24,3 @@ input, textarea {
   @include margin(bottom, 20px); }
 textarea {
   resize: none; }
-.button-send {
-  @include desktop{
-  float: right;
-  @include margin(top, 0); }}
-  
-//   @media (min-width: 992px) {
-//           form {
-//   padding-bottom: 40px; }
-//   form p {
-//     display: inline-block;
-//     float: left; }
-//   form .button-send {
-//     float: right;
-//     margin-top: 0; }
-// .text-center form p, h2 form p, h3 form p, .nav-main form p {
-//   margin-top: 10px; }
