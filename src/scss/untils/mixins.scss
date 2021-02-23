@@ -26,12 +26,15 @@ $desktop: 992;
 @mixin google-font {
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
   }
-@mixin border($direction, $color) {
-    @if variable-exists('direction') {
+@mixin border($color, $direction:"") {
+  @if $direction != "" {
       border-#{$direction}: 2px solid $color;
-  } @else {
+    }
+  
+    @else {
       border: 2px solid $color;
-  }}
+    }
+  }  
 @mixin textTransform($textTransform){
   text-transform: $textTransform;
 }

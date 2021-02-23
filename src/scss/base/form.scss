@@ -20,7 +20,7 @@ input, textarea {
   outline: none;
   padding: 15px;
   color: $grey;
-  @include border('default', $pink);
+  @include border($pink);
   @include margin(bottom, 20px); }
 textarea {
   resize: none; }

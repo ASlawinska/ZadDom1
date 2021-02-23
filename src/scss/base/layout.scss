@@ -34,7 +34,7 @@ header {
   @include wh(100%, auto);
   vertical-align: middle;
   padding: 10px;
-  border-bottom: 2px solid $darkGrey; }
+  @include border($darkGrey, bottom); }
   
 h1 {
   display: inline-block; }

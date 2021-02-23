@@ -56,16 +56,16 @@ figure {
             &:before {
                 content: '';
                 position: absolute;
-                @include border(top, $white);
-                @include border(left, $white);
+                @include border($white, top);
+                @include border($white, left);
                 @include wh(20px);
                 @include position($top: 0, $left: 0);
                 @include transition (all 1s ease-in-out);}
             &:after {
                 content: '';
                 position: absolute;
-                @include border(top, $white);
-                @include border(right, $white);
+                @include border($white, top);
+                @include border($white, right);
                 @include wh(20px);
                 @include position($top: 0, $right: 0);
                 @include transition (all 1s ease-in-out); }}
@@ -74,16 +74,16 @@ figure {
             &:before {
                 content: '';
                 position: absolute;
-                @include border(bottom, $white);
-                @include border(left, $white);
+                @include border($white, bottom);
+                @include border($white, left);
                 @include wh(20px);
                 @include position($bottom: 0, $left: 0);
                 @include transition (all 1s ease-in-out);}
             &:after {
                 content: '';
                 position: absolute;
-                @include border(bottom, $white);
-                @include border(right, $white);
+                @include border($white, bottom);
+                @include border($white, right);
                 @include wh(20px);
                 @include position($right: 0, $bottom: 0);
                 @include transition (all 1s ease-in-out);}
